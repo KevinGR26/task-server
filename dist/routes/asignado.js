@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+// import { deleteTarea, getTarea, getTareas, postTarea, updateTarea } from "../controllers/tarea";
+// import { deleteCreador, getCreador, getCreadores, postCreador, updateCreador } from "../controllers/creador";
+const asignado_1 = require("../controllers/asignado");
+const router = (0, express_1.Router)();
+router.get('/', asignado_1.getAsignados);
+router.get('/:id', asignado_1.getAsignado);
+router.delete('/:id', asignado_1.deleteAsignado);
+router.post('/', asignado_1.postAsignado);
+router.put('/:id', asignado_1.updateAsignado);
+exports.default = router;
